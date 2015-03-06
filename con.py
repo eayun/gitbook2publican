@@ -113,13 +113,13 @@ def proccessMiscPublicanFiles():
     ent.write("""\
 <!ENTITY PRODUCT "Documents">
 <!ENTITY BOOKID "administrator-guide">
-<!ENTITY YEAR "2014">
-<!ENTITY HOLDER "| Comapny name |">
-<!ENTITY OVIRT " product name ">
-<!ENTITY OVIRT_STORAGE " product Storage ">
-<!ENTITY MANAGER "manager">
-<!ENTITY NODE "node">
-<!ENTITY DEFAULT_LOGICAL_NETWORK "management network">
+<!ENTITY YEAR "2015">
+<!ENTITY HOLDER "| 易云捷讯技术有限公司 |">
+<!ENTITY OVIRT " Eayun 企业级虚拟化 ">
+<!ENTITY OVIRT_STORAGE " Eayun 企业级虚拟化存储 ">
+<!ENTITY MANAGER "Eayun 企业级虚拟化管理中心">
+<!ENTITY NODE "Eayun 企业级虚拟化宿主机">
+<!ENTITY DEFAULT_LOGICAL_NETWORK "管理网络">
 """)
     ent.close()
 
@@ -132,13 +132,58 @@ def proccessMiscPublicanFiles():
 ]>
 <authorgroup>
     <author>
-      <firstname>firstname</firstname>
-      <surname>surname</surname>
+      <firstname>哲</firstname>
+      <surname>马</surname>
       <affiliation>
-        <orgname>orgname</orgname>
-        <orgdiv>orgdiv</orgdiv>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
       </affiliation>
-      <email>walteryang47@gmail.com</email>
+      <email>zhe.ma@eayun.com</email>
+    </author>
+    <author>
+      <firstname>礼洋</firstname>
+      <surname>潘</surname>
+      <affiliation>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
+      </affiliation>
+      <email>liyang.pan@eayun.com</email>
+    </author>
+    <author>
+      <firstname>媛媛</firstname>
+      <surname>相</surname>
+      <affiliation>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
+      </affiliation>
+      <email>yuanyuan.xiang@eayun.com</email>
+    </author>
+    <author>
+      <firstname>亚琪</firstname>
+      <surname>张</surname>
+      <affiliation>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
+      </affiliation>
+      <email>yaqi.zhang@eayun.com</email>
+    </author>
+    <author>
+      <firstname>超</firstname>
+      <surname>赵</surname>
+      <affiliation>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
+      </affiliation>
+      <email>chao.zhao@eayun.com</email>
+    </author>
+    <author>
+      <firstname>嫣然</firstname>
+      <surname>周</surname>
+      <affiliation>
+        <orgname>易云捷讯</orgname>
+        <orgdiv>虚拟化文档组</orgdiv>
+      </affiliation>
+      <email>yanran.zhou@eayun.com</email>
     </author>
 </authorgroup>
 """)
