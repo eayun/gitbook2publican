@@ -44,5 +44,3 @@ find . -type f -print0 | xargs -0 sed -i 's/elouai/<listitem><para>/g'
 find . -type f -print0 | xargs -0 sed -i 's/splashlee/<\/para><\/listitem>/g'
 
 cp -r ../../images/ ./zh-CN
-
-publican build --formats=pdf --langs=zh-CN --brand_dir=/usr/share/publican/Common_Content/eayun
