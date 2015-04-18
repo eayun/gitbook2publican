@@ -7,6 +7,7 @@ from collections import OrderedDict
 
 input_file = os.path.abspath(sys.argv[1])
 output_dir = os.path.abspath(sys.argv[2])
+book_name = sys.argv[3]
 output_dir_zh = output_dir + "/zh-CN"
 index = 0
 index_dict = {}
@@ -14,13 +15,13 @@ tree = OrderedDict()
 
 if not os.path.exists(output_dir_zh):
     os.makedirs(output_dir_zh)
-output_file = codecs.open(output_dir_zh + '/administrator-guide.xml', 'w', 'utf-8')
+output_file = codecs.open(output_dir_zh + '/' + book_name + '.xml', 'w', 'utf-8')
 
 
 def output_prefix(output_file):
     output_file.write("<?xml version='1.0' encoding='utf-8' ?>\n")
     output_file.write("<!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n")
-    output_file.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"administrator-guide.ent\">\n")
+    output_file.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
     output_file.write("%BOOK_ENTITIES;\n")
     output_file.write("]>\n")
     output_file.write("<book>\n")
@@ -71,7 +72,7 @@ def proccessDockbook(tree, depth, p_title, p_title_path, output_file):
         if depth == 1:
             output_file.write("<?xml version='1.0' encoding='utf-8' ?>\n")
             output_file.write("<!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n")
-            output_file.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"administrator-guide.ent\">\n")
+            output_file.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
             output_file.write("%BOOK_ENTITIES;\n")
             output_file.write("]>\n")
             output_file.write("<chapter id=\"" + p_title_path.replace('/', '_') + "\">\n")
@@ -109,10 +110,10 @@ def proccessSUMMARYmd():
 
 
 def proccessMiscPublicanFiles():
-    ent = open(output_dir_zh + '/administrator-guide.ent', 'w')
+    ent = open(output_dir_zh + '/' + book_name + '.ent', 'w')
+    ent.write("<!ENTITY PRODUCT \"Documents\">\n")
+    ent.write("<!ENTITY BOOKID \"" + book_name + "\">\n")
     ent.write("""\
-<!ENTITY PRODUCT "Documents">
-<!ENTITY BOOKID "administrator-guide">
 <!ENTITY YEAR "2015">
 <!ENTITY HOLDER "| 易云捷讯技术有限公司 |">
 <!ENTITY OVIRT " Eayun 企业级虚拟化 ">
@@ -127,7 +128,9 @@ def proccessMiscPublicanFiles():
     author_group.write("""\
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE authorgroup PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "administrator-guide.ent">
+""")
+    author_group.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
+    author_group.write("""\
 %BOOK_ENTITIES;
 ]>
 <authorgroup>
@@ -193,21 +196,19 @@ def proccessMiscPublicanFiles():
     book_info.write("""\
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "administrator-guide.ent">
+""")
+    book_info.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    book_info.write("""\
 %BOOK_ENTITIES;
 ]>
-<bookinfo id="book-Documents-administrator-guide-administrator_guide">
-    <title>administrator-guide</title>
-    <subtitle>EayunOS 系统管理员手册</subtitle>
+<bookinfo id="book-Documents-Book_info">
+""")
+    book_info.write("<title>" + book_name + "</title>")
+    book_info.write("""\
     <productname>EayunOS</productname>
     <productnumber>4.1</productnumber>
     <edition>0</edition>
     <pubsnumber>0</pubsnumber>
-    <abstract>
-        <para>
-                  本手册会详细介绍如何管理虚拟化解决方案。
-        </para>
-    </abstract>
     <corpauthor>
         <inlinemediaobject>
             <imageobject>
@@ -221,14 +222,17 @@ def proccessMiscPublicanFiles():
 """)
     book_info.close()
 
+
     revision_his = open(output_dir_zh + '/Revision_History.xml', 'w')
     revision_his.write("""\
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "administrator-guide.ent">
+""")
+    revision_his.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    revision_his.write("""\
 %BOOK_ENTITIES;
 ]>
-<appendix id="appe-Documents-administrator-guide-Revision_History">
+<appendix id="appe-Documents-Revision_History">
     <title>修订历史</title>
     <simpara>
         <revhistory>
@@ -267,10 +271,12 @@ xml_lang: "zh-CN"
     publican.write("""\
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "administrator-guide.ent">
+""")
+    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    publican.write("""\
 %BOOK_ENTITIES;
 ]>
-<preface id="pref-Documents-administrator-guide-Preface">
+<preface id="pref-Documents-Preface">
     <title>Preface</title>
     <xi:include href="Common_Content/Conventions.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
     <xi:include href="Feedback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"><xi:fallback xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="Common_Content/Feedback.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
@@ -284,22 +290,24 @@ xml_lang: "zh-CN"
     publican.write("""\
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "administrator-guide.ent">
+""")
+    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    publican.write("""\
 %BOOK_ENTITIES;
 ]>
-<chapter id="chap-Documents-administrator-guide-Chapter-using-guide">
+<chapter id="chap-Documents-Chapter-using-guide">
     <title>手册使用向导</title>
     <para>
         This is a test paragraph
     </para>
-    <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_1">
+    <section id="sect-Documents-Chapter-using-guide-Section_1">
         <title>阅读管理员手册前的准备</title>
         <para>
             This is a test paragraph in a section
         </para>
     </section>
 
-    <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_2">
+    <section id="sect-Documents-Chapter-using-guide-Section_2">
         <title>本手册的层次结构</title>
         <para>
             This is a test paragraph in Section 2
@@ -313,26 +321,26 @@ xml_lang: "zh-CN"
         </para>
     </section>
 
-    <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_3">
+    <section id="sect-Documents-Chapter-using-guide-Section_3">
         <title>流程实例</title>
         <para>
         </para>
-           <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_3-1">
+           <section id="sect-Documents-Chapter-using-guide-Section_3-1">
                 <title>概览</title>
                 <para>
                 </para>
            </section>
-           <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_3-2">
+           <section id="sect-Documents-Chapter-using-guide-Section_3-2">
                 <title>流程示例之创建iscsi数据中心</title>
                 <para>
                 </para>
            </section>
-           <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_3-3">
+           <section id="sect-Documents-Chapter-using-guide-Section_3-3">
                 <title>流程示例之负载</title>
                 <para>
                 </para>
            </section>
-           <section id="sect-Documents-administrator-guide-Chapter-using-guide-Section_3-4">
+           <section id="sect-Documents-Chapter-using-guide-Section_3-4">
                 <title>流程示例之供用户组使用的模板</title>
                 <para>
                 </para>

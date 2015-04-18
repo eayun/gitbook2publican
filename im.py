@@ -31,9 +31,13 @@ with codecs.open(source_path + '/SUMMARY.md', 'r', 'utf-8') as f:
         replace = paths[:-len(".md")]
         replacer = ''
         paths = replace.split('/')
-        for path in paths:
-            replacer = replacer + '/' + path_dict[path]
-        replacer = replacer[1:]
+        try:
+            for path in paths:
+                replacer = replacer + '/' + path_dict[path]
+            replacer = replacer[1:]
+        except (AttributeError, KeyError):
+            print "Warning, no key: " + line[line.rindex("(") + 1:line.rindex(")")]
+            replacer = replace
         if not os.path.exists(os.path.dirname(out_path + '/' + replacer + '.md').encode('utf-8')):
             os.mkdir(os.path.dirname(out_path + '/' + replacer + '.md').encode('utf-8'))
         shutil.copy2(source_path + '/' + replace + '.md', out_path + '/' + replacer + '.md')

@@ -25,7 +25,7 @@ find . -type f -print0 | xargs -0 sed -i 's/<\/li>/splashlee/g'
 find . -type f -print0 | xargs -0 sed -i 's/<li\/>/splashlee/g'
 find . -type f -print0 | xargs -0 sed -i 's/..\/images\//images\//'
 find . -type f -print0 | xargs -0 sed -i '1N;$!N;s/\(!\[.*\](.*)\)[\n[ ]*]*\n[ ]*\*\*.*\*\*/\1/;P;D'
-python $BASEDIR/con.py ./SUMMARY.md docbook
+python $BASEDIR/con.py ./SUMMARY.md docbook $1
 cd docbook
 find . -type f -print0 | xargs -0 sed -i 's/sect1/section/g'
 find . -type f -print0 | xargs -0 sed -i 's/sect2/section/g'
