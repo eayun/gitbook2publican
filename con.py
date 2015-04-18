@@ -203,7 +203,8 @@ def proccessMiscPublicanFiles():
 ]>
 <bookinfo id="book-Documents-Book_info">
 """)
-    book_info.write("<title>" + book_name + "</title>")
+    book_info.write("<title>" + book_name + "</title>\n")
+    book_info.write("<subtitle>" + book_name + "</subtitle>\n")
     book_info.write("""\
     <productname>EayunOS</productname>
     <productnumber>4.1</productnumber>
@@ -228,7 +229,7 @@ def proccessMiscPublicanFiles():
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 """)
-    revision_his.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    revision_his.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
     revision_his.write("""\
 %BOOK_ENTITIES;
 ]>
@@ -272,7 +273,7 @@ xml_lang: "zh-CN"
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 """)
-    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
     publican.write("""\
 %BOOK_ENTITIES;
 ]>
@@ -291,7 +292,7 @@ xml_lang: "zh-CN"
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 """)
-    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">")
+    publican.write("<!ENTITY % BOOK_ENTITIES SYSTEM \"" + book_name + ".ent\">\n")
     publican.write("""\
 %BOOK_ENTITIES;
 ]>
