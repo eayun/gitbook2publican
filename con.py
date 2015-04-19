@@ -210,6 +210,9 @@ def proccessMiscPublicanFiles():
     <productnumber>4.1</productnumber>
     <edition>0</edition>
     <pubsnumber>0</pubsnumber>
+    <abstract>
+        <para></para>
+    </abstract>
     <corpauthor>
         <inlinemediaobject>
             <imageobject>
