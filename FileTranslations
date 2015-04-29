@@ -714,3 +714,105 @@ Bonds|Bonds
 对主机网卡中的自定义绑定选项的实例|custom_bond_example_in_host_nic
 EayunOS_中使用代理进行电源管理|using_power_management_via_proxy
 手动隔离或分离一个无响应的主机|manual_fence_uresponsive_host
+为虚拟机配置单点登录|configure_sso_for_vm
+基本视图选项卡|basic_view_tab
+扩展视图选项卡|extend_view_tab
+访问用户门户|visit_user_portal
+配置 USB 设备|configure_usb_device
+配置控制台选项|configure_console_settings
+使用虚拟机：高级特性|using_vm_advanced_features
+安装支持的组件|install_supported_components
+虚拟机驱动程序和代理程序|vm_driver_and_agents
+配置多个显示器|configure_multiple_monitor
+为操作系统是 Windows 的虚拟机配置单点登录|configure_sso_for_windows_vm
+使用 Active Directory 为操作系统是 linux 的虚拟机配置单点登录|configure_sso_for_linux_vm_using_active_directory
+取消虚拟机的单点登录|cancel_sso_for_vm
+使用 IPA（IdM） 为操作系统是 linux 的虚拟机配置单点登录|configure_sso_for_linux_vm_using_IPA
+在虚拟机上配置单点登录|configure_sso_on_vm
+启动一台虚拟机|running_a_vm
+基本视图界面|basic_view_ui
+注销一台虚拟机|sign_out_vm
+运行虚拟机介绍|running_vm_intro
+连接至一台已经启动的虚拟机|connecting_running_vm
+Cloud-init 介绍|Cloud-init_intro
+克隆虚拟机|clone_vm
+封装一个 Windows 模版|encapsure_win_template
+浮动磁盘|floating_disk
+虚拟机系统设置解释|vm_system_setting_explained
+Cloud-init 用例场景|Cloud-init_case
+创建一个模版|create_a_template
+封装一台 Linux 虚拟机来为模版的部署做准备|encapsulate_linux_vm_for_template_deploy
+监控资源|monitor_resource
+虚拟机自定义属性设置解释|vm_custom_property_explained
+watchdog.conf 中的 Watchdog 参数|watchdog_conf_parameter
+管理快照|manage_snapshots
+为一台虚拟机添加一个 Watchdog Card|adding_Watchdog_Card_to_vm
+创建快照|create_snapshot
+手动封装一台 Linux 虚拟机来为模版的部署做准备|mamualy_encapsulate_Linux_vm_for_template_deploy
+管理模版的系统权限|manage_system_permissions_of_template
+虚拟机随机数生成器设置解释|vm_rng_setting_explained
+为一台虚拟机管理系统权限|manage_system_permissions_of_vm
+扩展一个在线虚拟机的磁盘空间|extend_live_vm_disk_size
+编辑一个模版|editing_template
+虚拟机高可用设置解释|vm_ha_explaned
+为准备部署而封装模版|encapsulate_template_for_deploy
+删除一个模版|delete_template
+扩展视图界面|extend_view_ui
+编辑一个网络接口|edit_nic
+资源|resource
+为用户分配虚拟机|assign_vm_to_user
+删除一台虚拟机|delete_vm
+超出配额时需要做什么|what_to_do_when_exceed_quota
+为虚拟机更换 CD|change_cd_for_vm
+新建模版窗口中设置与控制的解释|new_template_etting_explained
+编辑虚拟机属性|edit_vm_property
+为虚拟机添加一个虚拟磁盘|adding_disk_to_vm
+删除用户对虚拟机访问的权限|delete_user_permission_of_accessing_vm
+新建虚拟机和编辑虚拟机窗口中的设置与控制的介绍|new_edit_vm_window_settings_explained
+虚拟机初始运行设置解释|vm_initial_run_settings_explaiend
+连接至虚拟机|connecting_to_vm
+使用 Cloud-init 准备一个模版|preparing_template_using_cloud_init
+智能卡验证|smart_card_validate
+虚拟机只运行一次的设置介绍|vm_runonce_intro
+通过用户门户关闭一台虚拟机|shutdown_vm_via_userportal
+使用 Cloud-init 初始化一台虚拟机|init_vm_using_cloud_init
+启用和禁用智能卡|enable_disable_smart_card
+模版|template
+通过用户门户重启一台虚拟机|start_vm_vie_userportal
+使用 Cloud-init 自动配置虚拟机|auto_configure_vm_using_cloud_init
+在 VirtIO 优化硬盘上安装 Windows|install_windows_on_virtio_disk
+模版与权限|template_and_permission
+虚拟机常规设置解释|vm_normal_settings_explained
+配置 Watchdog 功能|configure-watchdog_function
+使用 sys-unconfig 封装一台 Linux 虚拟机来为模版的部署做准备|encapsulate_Linux_vm_using_sys-unconfig_for_deploy
+基于模版创建一台克隆的虚拟机|create_cloned_vm_from_template
+模版介绍|template_intro
+虚拟机引导选项设置解释|vm_boot_setting_explained
+配置一个 Watchdog|configure_watchdog
+使用快照来恢复一台虚拟机|restore_vm_using_snapshot
+基于模版创建一台虚拟机|create_vm_from_template
+模版任务|template_task
+虚拟机控制台设置解释|vm_console_setting_explaned
+克隆一台虚拟机|clone_vm
+安装 Cloud-init|install_cloud_init
+模版用户角色介绍|template_user_role_intro
+虚拟机用户角色的解释|vm_user_role_explained
+配置虚拟机的网络接口和硬盘|configure_vm_nic_and_disk
+克隆快照|clone_snapshot
+安装 Watchdog|install_watchdog
+模版管理员角色介绍|template_manager_role_intro
+虚拟机管理员角色的解释|vm_manager_role_explained
+配额——一个用户的介绍|quota_user_view_explained
+在 IE 浏览器中安装 EayunOS 管理端证书|install_cer_in_IE
+在windows系统中安装Remote viewer|install_remote_viewer_in_windows
+安装 Engine 证书|install_engine_cer
+用户门户界面|userportal
+首次登录|initial_login
+在linux系统中使用firefox浏览器，安装SPICE插件|install_spice_firefox_plugin_in_linux
+在windows系统中安装USB clerk|install_usb_clerk_in_windows
+注销用户门户|logout_userportal
+登录用户门户|login_userportal
+在windows系统中使用Internet Explorer浏览器，安装SPICE控件|install_spice_plugin_in_IE
+在火狐浏览器中安装 EayunOS 管理端证书|install_eayun_cer_in_fiewfox
+浏览器要求|browser_requirements
+访问用户门户|visit_userportal
