@@ -802,7 +802,6 @@ watchdog.conf 中的 Watchdog 参数|watchdog_conf_parameter
 安装 Watchdog|install_watchdog
 模版管理员角色介绍|template_manager_role_intro
 虚拟机管理员角色的解释|vm_manager_role_explained
-配额——一个用户的介绍|quota_user_view_explained
 在 IE 浏览器中安装 EayunOS 管理端证书|install_cer_in_IE
 在windows系统中安装Remote viewer|install_remote_viewer_in_windows
 安装 Engine 证书|install_engine_cer
@@ -816,3 +815,63 @@ watchdog.conf 中的 Watchdog 参数|watchdog_conf_parameter
 在火狐浏览器中安装 EayunOS 管理端证书|install_eayun_cer_in_fiewfox
 浏览器要求|browser_requirements
 访问用户门户|visit_userportal
+在 linux 客户端上使用 USB 设备|use_usb_in_linux_client
+在虚拟机上使用 USB 设备之 Native 模式|use_usb_linux_native
+在虚拟机上使用 USB 设备之传统模式|use_usb_linux_legacy
+配置一个 linux 客户端并以传统模式的方式使用 USB 重定向|configure_use_usb_linux_legacy
+在 Windows 客户端上使用 USB 设备|use_usb_in_windows_client
+在虚拟机上使用 USB 设备之介绍|use_usb_linux_intro
+配置 USB 设备|configure_usb
+配置一个 Windows 客户端并以传统模式的方式使用 USB 重定向|configure_use_usb_windows_legacy
+RDP 控制台选项|rdp_console_option
+Remote Viewer 快捷键|remote_viewer_shortcut
+Remote Viewer 选项_|remote_viewer_option_
+Remote Viewer 选项|remote_viewer_option
+SPICE 控制台选项|spice_console_option
+VNC 控制台选项|vnc_console_option
+控制台选项|console_option
+访问控制台选项|visit_console_option
+连接协议介绍|connection_protocol_intro
+配置控制台选项|configure_console_option
+EayunOS的虚拟机驱动和虚拟机代理|manager_vm_driver_and_agent
+RemoteViewer选项解释|remote_viewer_option_explained
+VNC控制台选项的解释|vnc_console_option_explained
+在Linux虚拟机上安装虚拟机代理和驱动|install_vm_driver_and_agent_linux
+安装虚拟机代理和驱动|install_vm_driver_and_agent
+虚拟机驱动和代理|vm_driver_and_agent
+Linux Client配置传统模式USB重定向|linux_client_usb_redirect_legacy_configure
+RemoteView的快捷键|remote_viewers_shortcut
+Windows Client配置传统模式USB重定向|win_client_configure_usb_redirect_legacy
+在Windows虚拟机上安装虚拟机代理和驱动|install_vm_driver_and_agent_windows
+RemoteViewer选项|remote_viewer_option
+RDP控制台选项的解释|rpm_console_option_explained
+SPICE快捷键|spice_shortcut
+SPICE控制台选项的解释|spice_console_option_explained
+使用SPICE属性配置|use_spice_property_configure
+使用虚拟机：高级特性|use_vm_advanced_feature
+在虚拟机内使用USB设备|use_usb_in_vm
+多显示器支持|multi_monitor_support
+桌面协议介绍|desktop_protocol_intro
+虚拟机上使用USB设备-传统模式|vm_use_usb_dev_legacy
+配置控制台选项|configure_console_options
+在 Linux 上安装 Remote Viewer|install_remote_viewer_linux
+在 Windows 上安装 Remote Viewer|install_remote_viewer_windows
+在 Windows 操作系统中安装 USB Clerk|install_usb_clerk_windows
+在 Windows 的 IE 浏览器上安装 Remote Viewer|install_remote_viewer_windows_ie
+安装 USB 重定向组件|install_usb_redirect_component
+手动关联 console.vv 文件和 Remote Viewer|bind_consolevv_to_remote_viewer_manually
+在 linux 操作系统上安装虚拟机代理和驱动|install_vm_driver_agent_windows
+在 Windows 操作系统上安装虚拟机代理和驱动|install_vm_driver_agent_linux
+注销虚拟机|logout_vm
+访问启动的虚拟机|visit_running_vm
+超过配额限制时如何解决|resolve_when_excceed_quota_limit
+运行虚拟机-概览|run_vm_summary
+为操作系统是 linux 的虚拟机配置多个显示器|configure_multiple_monitor_linux
+为操作系统是 Windows 的虚拟机配置多个显示器|configure_multiple_monitor_windows
+更改操作系统是 linux 的虚拟机的显示分辨率|change_monitor_resolution_linux
+更改操作系统是 Windows 的虚拟机的显示分辨率|change_monitor_resolution_windows
+使用快照克隆|clone_using_snapshot
+使用 Sysprep 封装一个 Windows 模版所需要考虑的问题|considerations_creating_windows_template_using_sysprep
+封装一个 Windows XP 模版|encapsulate_windows_xp_template
+封装一个 Windows 7 或 Windows 2008 模板|encapsulate_win7_or_win2008_template
+配额——以用户的角度来介绍|quota_explained_on_users_perspective
