@@ -4,11 +4,9 @@ import os
 import sys
 
 xmlfile_path = os.path.abspath(sys.argv[1])
-
+print xmlfile_path
 xml_doc = xmlParser.parse(xmlfile_path)
 root_element = xml_doc.getroot()
-
-print xmlfile_path
 
 
 def writexml(xml_doc):
