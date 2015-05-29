@@ -875,3 +875,4 @@ SPICE控制台选项的解释|spice_console_option_explained
 封装一个 Windows XP 模版|encapsulate_windows_xp_template
 封装一个 Windows 7 或 Windows 2008 模板|encapsulate_win7_or_win2008_template
 配额——以用户的角度来介绍|quota_explained_on_users_perspective
+通过定义网络接口和硬盘完成对虚拟机的网络接口和硬盘的配置|configure_vm_nic_and_disk
