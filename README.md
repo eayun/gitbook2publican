@@ -5,7 +5,7 @@
 ## Usage
 
 * cd into ```[gitbook directory]```
-* run ```[this script directory]/auto.sh```
+* run ```[this script directory]/auto.sh [book name]```
 * cd into ```[gitbook directory]/docbook/docbook``` to see the publican output
 * compile publican source, for example: ```publican build --formats=html,pdf --langs=zh-CN --brand_dir=/usr/share/publican/Common_Content/eayun```
 
